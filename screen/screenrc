@@ -1,0 +1,23 @@
+term screen-256color
+maptimeout 5
+
+startup_message off
+deflogin on
+
+caption always "%{= Kw}%-w%{= Bw}%n %t%{-}%+w %-="
+
+defscrollback 1000000
+
+bindkey -m [1;5D stuff b
+bindkey -m [1;5C stuff w
+
+bindkey -m ^[OF stuff $
+bindkey -m OH stuff ^
+
+bind K eval "clear" "scrollback 0" "scrollback 1000000"
+
+bind . eval "exec sh -c 'xsel -bi </tmp/screen-exchange'"
+bind , eval "exec sh -c 'xsel -bo >/tmp/screen-exchange'"
+
+activity "Activity in %t(%n)"
+

@@ -1,0 +1,9 @@
+<kpartgui version="1" name="konsole">
+  <ActionProperties>
+    <Action shortcut="Ctrl+Shift+T; Meta+T" name="open-session"/>
+    <Action shortcut="Ctrl+Shift+W; Meta+W" name="close-session"/>
+    <Action shortcut="Ctrl+Shift+C; Meta+C" name="edit_copy"/>
+    <Action shortcut="Ctrl+Shift+V; Meta+V" name="edit_paste"/>
+    <Action shortcut="Ctrl+Shift+K; Meta+K" name="clear-history-and-reset"/>
+  </ActionProperties>
+</kpartgui>

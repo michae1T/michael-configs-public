@@ -1,0 +1,12 @@
+set background=light
+
+syntax on
+
+set nocompatible
+set backspace=indent,eol,start
+
+
+if match($TERM, "screen")!=-1
+  set term=xterm
+endif
+
