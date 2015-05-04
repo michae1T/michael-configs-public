@@ -1,0 +1,10 @@
+#!/bin/bash
+
+COMMON_TOOLS=/opt/scripts/common_tools
+
+if [ -d "$COMMON_TOOLS" ] ; then
+  LOAD_COMPLETION=1 source $COMMON_TOOLS/vault
+  LOAD_COMPLETION=1 source $COMMON_TOOLS/notes
+  LOAD_COMPLETION=1 source $COMMON_TOOLS/set-laptop-mode
+fi;
+
