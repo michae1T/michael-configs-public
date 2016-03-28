@@ -1,0 +1,15 @@
+! Set Super_L (Search) key to be a Control key
+!remove Mod4 = Super_L
+!add Control = Super_L
+
+! Set Left Control key to Mode Switch
+keycode 133 = Mode_switch
+
+! Set PgUp / PgDown / Home / End to Mode Switch (Left Control) + arrow keys
+keycode 113 = Left Left Home
+keycode 114 = Right Right End
+keycode 111 = Up Up Page_Up
+keycode 116 = Down Down Page_Down
+
+! Set Mode Switch (Left Control) + Backspace to Delete
+keycode 22 = BackSpace BackSpace Delete
