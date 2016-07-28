@@ -6,6 +6,11 @@ set nocompatible
 set backspace=indent,eol,start
 filetype plugin on
 
+let mapleader=","
+
+nnoremap <silent><leader>< :let @" = join(readfile($SCREEN_EXCHANGE), "\n")<CR>
+nnoremap <silent><leader>> :call writefile( split(@", "\n"), $SCREEN_EXCHANGE )<CR>
+
 if match($TERM, "screen")!=-1
   set term=xterm
 endif

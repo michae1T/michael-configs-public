@@ -16,8 +16,11 @@ bindkey -m OH stuff ^
 
 bind K eval "clear" "scrollback 0" "scrollback 1000000"
 
-bind . eval "exec sh -c 'xsel -bi </tmp/screen-exchange'"
-bind , eval "exec sh -c 'xsel -bo >/tmp/screen-exchange'"
+setenv SCREEN_EXCHANGE "$HOME/.screen-exchange"
+bufferfile "$SCREEN_EXCHANGE"
+
+bind . eval "exec sh -c 'xsel -bi <$SCREEN_EXCHANGE'"
+bind , eval "exec sh -c 'xsel -bo >$SCREEN_EXCHANGE'"
 
 activity "Activity in %t(%n)"
 
