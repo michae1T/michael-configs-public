@@ -19,8 +19,8 @@ bind K eval "clear" "scrollback 0" "scrollback 1000000"
 setenv SCREEN_EXCHANGE "$HOME/.screen-exchange"
 bufferfile "$SCREEN_EXCHANGE"
 
-bind . eval "exec sh -c 'xsel -bi <$SCREEN_EXCHANGE'"
-bind , eval "exec sh -c 'xsel -bo >$SCREEN_EXCHANGE'"
+bind . eval "exec screenex_clip out"
+bind , eval "exec screenex_clip in"
 
 activity "Activity in %t(%n)"
 
