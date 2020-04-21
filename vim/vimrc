@@ -1,4 +1,4 @@
-set background=light
+set background=dark
 
 syntax on
 
@@ -6,12 +6,22 @@ set nocompatible
 set backspace=indent,eol,start
 filetype plugin on
 
+map <C-t><up> :tabr<cr>
+map <C-t><down> :tabl<cr>
+map <C-t><left> :tabp<cr>
+map <C-t><right> :tabn<cr>
+
 let mapleader=","
 
+" vim <--> screen buffer
 nnoremap <silent><leader>< :let @" = join(readfile($SCREEN_EXCHANGE), "\n")<CR>
 nnoremap <silent><leader>> :call writefile( split(@", "\n"), $SCREEN_EXCHANGE )<CR>
 
+" snakecase - camelcase
+nnoremap <silent><leader>c :%s#\%V_\(\l\)#\u\1#g
+nnoremap <silent><leader>s :%s#\%V\C\(\<\u[a-z0-9]\+\\|[a-z0-9]\+\)\(\u\)#\l\1_\l\2#g
+
 if match($TERM, "screen")!=-1
-  set term=xterm
+  set term=xterm-256color
 endif
 
