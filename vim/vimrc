@@ -4,6 +4,8 @@ syntax on
 
 set nocompatible
 set backspace=indent,eol,start
+set autoindent
+set expandtab
 filetype plugin on
 
 map <C-t><up> :tabr<cr>
