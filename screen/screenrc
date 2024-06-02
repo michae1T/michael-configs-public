@@ -4,7 +4,7 @@ maptimeout 5
 startup_message off
 deflogin on
 
-caption always "%{= Kw}%-w%{= Bw}%n %t%{-}%+w %-="
+caption always "%{= Kw}%-w%{= Bw}%n %t%{-}%+w %-= [ %c ] "
 
 defscrollback 1000000
 
