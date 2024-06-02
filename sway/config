@@ -1,4 +1,30 @@
+output * bg /home/michael/Pictures/f38-01-day.png fill
+
 input "1267:12695:ELAN067A:00_04F3:3197_Touchpad" {
+       pointer_accel 1
+       dwt enabled
+       tap enabled
+}
+
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+       pointer_accel 1
+       dwt enabled
+       tap enabled
+}
+
+input "1739:0:Synaptics_TM3512-010" {
+       pointer_accel 1
+       dwt enabled
+       tap enabled
+}
+
+input "1267:12695:ELAN067A:00_04F3:3197_Touchpad" {
+       pointer_accel 1
+       dwt enabled
+       tap enabled
+}
+
+input "1267:12693:ELAN0676:00_04F3:3195_Touchpad" {
        pointer_accel 1
        dwt enabled
        tap enabled
@@ -6,7 +32,6 @@ input "1267:12695:ELAN067A:00_04F3:3197_Touchpad" {
 
 input type:keyboard {
   xkb_layout us-custom
-#  xkb_options ctrl:nocaps
 }
 
 exec swayidle -w \
@@ -21,6 +46,5 @@ workspace 1
 
 workspace 2
     exec slack
-
 
 include /etc/sway/config

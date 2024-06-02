@@ -2,3 +2,5 @@
 .idea
 .bsp
 dist-newstyle
+.bsp/
+.idea/

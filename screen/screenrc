@@ -5,9 +5,11 @@ truecolor on
 startup_message off
 deflogin on
 
-caption always "%{#000000;#e6e6e6}%-w%{#ffffff;#ff6c5c}%n %t%{-}%+w %-= [ %c ] "
-#caption always "%{#ffffff;#ff0000} [ %S ]  %f %t %? ( %{rY} %u %{#ffffff;#ff0000} ) %?"
-#caption always '%{#000000;#e6e6e6}%-Lw%{#ffffff;#ff6c5c}%50>%n%f* %t%{#000000;#e6e6e6}%+Lw%< %{#e6e6e6}%-= [ %c ]'
+backtick 0 5 5 "/bin/date" '+%Y-%m-%d'
+backtick 1 5 5 "/bin/date" '+%H:%M'
+backtick 2 5 5 "spain-time" 'clock'
+
+caption always "%{#000000;#e6e6e6}%-w%{#ffffff;#ff6c5c}%n %t%{-}%+w %-= [ %0` %1` / %2` ] "
 
 defscrollback 1000000
 
@@ -27,3 +29,4 @@ bind , eval "exec screenex_clip in"
 
 activity "Activity in %t(%n)"
 
+password none
