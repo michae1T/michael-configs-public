@@ -29,4 +29,3 @@ bind , eval "exec screenex_clip in"
 
 activity "Activity in %t(%n)"
 
-password none

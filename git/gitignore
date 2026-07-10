@@ -4,3 +4,24 @@
 dist-newstyle
 .bsp/
 .idea/
+
+# Metals (Scala Language Server)
+.metals/
+.bloop/
+project/metals.sbt
+project/project/
+
+
+# VS Code
+.vscode/
+# If you want to commit some .vscode settings (e.g., recommended extensions)
+# but ignore user-specific ones, you can be more granular:
+# .vscode/*
+# !.vscode/extensions.json
+# !.vscode/settings.json # If you have project-specific settings to share
+# !.vscode/launch.json # If you have project-specific launch configs to share
+
+# sbt build tool
+project/project/target/
+project/target/
+target/
